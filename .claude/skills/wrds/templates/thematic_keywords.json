@@ -1,0 +1,43 @@
+{
+  "name": "thematic_example",
+  "universe": {
+    "keywords_any": [
+      "semiconductor",
+      "chip",
+      "wafer"
+    ],
+    "min_market_cap": 300
+  },
+  "filters": [
+    {
+      "metric": "revenue",
+      "min": 100
+    }
+  ],
+  "custom_metrics": {
+    "rd_to_gross_profit": "xrd / (sale - cogs)"
+  },
+  "scoring": {
+    "metrics": [
+      {
+        "metric": "rev_growth_1y",
+        "weight": 1,
+        "direction": "high"
+      },
+      {
+        "metric": "rd_to_gross_profit",
+        "weight": 1,
+        "direction": "high"
+      },
+      {
+        "metric": "ev_to_sales",
+        "weight": 1,
+        "direction": "low"
+      }
+    ]
+  },
+  "output": {
+    "top_n": 30
+  },
+  "region": "global"
+}

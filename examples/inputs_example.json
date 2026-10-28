@@ -1,0 +1,32 @@
+{
+  "_note": "ILLUSTRATIVE ONLY. Every number is made up for a fictional company. Real inputs must come from your own licensed data (I/B/E/S consensus, Compustat fundamentals, Capital IQ) and the company's own filings. Probabilities and impacts are placeholders for your own scenario work.",
+  "company": "ExampleCo (fictional)",
+  "currency": "USD",
+  "analysis_date": "2026-10-27",
+  "price": 50.0,
+  "shares_m": 100.0,
+  "net_cash_m": {"now": -500.0, "12m": -400.0, "24m": -300.0},
+  "ebitda_m": {
+    "FY1": {"fiscal_year_end": "2026-12-31", "low": 540.0, "mode": 560.0, "high": 580.0},
+    "FY2": {"fiscal_year_end": "2027-12-31", "low": 570.0, "mode": 620.0, "high": 670.0},
+    "FY3": {"fiscal_year_end": "2028-12-31", "low": 600.0, "mode": 680.0, "high": 760.0}
+  },
+  "multiple_spread": {"low_ratio": 0.85, "high_ratio": 1.15},
+  "multiple_residual_log": -0.15,
+  "reversion_slope_per_year": 0.25,
+  "own_history_sd_12m_log": 0.35,
+  "idiosyncratic_sigma_12m": 0.08,
+  "hurdle_per_year": 0.09,
+  "states": {
+    "_comment": "Mutually exclusive demand states. Probabilities (12m, 24m); the base state takes the residual so they sum to one.",
+    "Downturn": {"prob": [0.15, 0.25], "ebitda": [-0.25, -0.10], "multiple": [0.80, 0.95]},
+    "Boom":     {"prob": [0.20, 0.20], "ebitda": [0.05, 0.15],   "multiple": [1.00, 1.10]}
+  },
+  "overlays": {
+    "_comment": "Overlays can co-occur with any state and with each other. Two-sided: include upside as well as downside events, and ranges may straddle zero.",
+    "Policy support":      {"prob": [0.25, 0.35], "ebitda": [0.02, 0.08],   "multiple": [1.00, 1.05]},
+    "Supply disruption":   {"prob": [0.05, 0.10], "ebitda": [-0.20, -0.05], "multiple": [0.85, 0.95]},
+    "Currency move":       {"prob": [0.20, 0.25], "ebitda": [-0.04, 0.04],  "multiple": [1.00, 1.00]}
+  },
+  "entry_rule": {"max_raw_p_loss": 0.35, "min_expected_return": 0.15}
+}

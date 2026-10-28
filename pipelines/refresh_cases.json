@@ -1,0 +1,24 @@
+{
+  "name": "refresh_cases",
+  "region": "global",
+  "universe": {
+    "min_market_cap": 1000
+  },
+  "custom_metrics": {
+    "capex_to_da": "capx / dp"
+  },
+  "analysis": {
+    "history_years": 12,
+    "peer_level": "gsubind",
+    "min_peers": 5,
+    "names": [
+      "FR0000044448",
+      "JP3389680004",
+      "JP3201600008",
+      "JP3371200001",
+      "AMKR",
+      "ATRL."
+    ],
+    "_note": "Example watchlist: up to six public identifiers (ISIN for non-US, ticker for US). Replace with your own case and peers."
+  }
+}

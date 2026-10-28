@@ -1,0 +1,97 @@
+{
+  "_comment": "EXAMPLE theme set (security and resilience), a template for your own. Theme definitions for theme_exposure.py. A company is in a theme if a segment matches (segment_regex or segment_naics, minus segment_exclude), or its GICS sub-industry starts with a gics_core prefix, or its name matches include_names, or its business description matches busdesc_regex. 'Core group' in the summary = segment share >= 50%, GICS core, or name include, excluding utilities (GICS sector 55). anchor_customers finds second-order suppliers.",
+  "grid_equipment": {
+    "sub_theme": "Critical Infrastructure / Energy Supply",
+    "segment_regex": "power distribution|electric(al|ity)? (transmission|distribution)|transmission (and|&) distribution|\\bgrid\\b|switchgear|transformer|substation|electrif|power (system|deliver|quality|management|conversion)|electrical (product|system|equipment|solution|infrastructure)|utility (solution|infrastructure)|high.voltage|energy management",
+    "segment_naics": [
+      "33531",
+      "23713"
+    ],
+    "busdesc_regex": "transformer|switchgear|substation|circuit breaker|power transmission|power distribution equipment|grid (automation|solution|equipment)|high.voltage|hvdc|power cable|insulator|heavy electric",
+    "anchor_customers": "siemens|hitachi|ge vernova|general electric|schneider|abb |eaton|quanta|duke energy|nextera|southern co|national grid|american electric|exelon|dominion",
+    "segment_exclude": "regulated|electric utilit|gas distribution|natural gas",
+    "gics_core": [
+      "20104010",
+      "20104020"
+    ],
+    "include_names": "hitachi|mitsubishi electric|fuji electric|sumitomo electric|fujikura|furukawa electric|prysmian|nexans|\\bnkt\\b|ls cable|ls electric|legrand|schneider|siemens energy|meidensha|daihen"
+  },
+  "wire_cable": {
+    "sub_theme": "Critical Infrastructure",
+    "segment_regex": "\\bcables?\\b|\\bwires?\\b|\\bconductors?\\b|fiber optic|subsea|submarine",
+    "segment_naics": [
+      "33592",
+      "33142",
+      "33149"
+    ],
+    "busdesc_regex": "power cable|submarine cable|subsea cable|high.voltage cable|wire and cable|cables and wires|optical fib",
+    "anchor_customers": "prysmian|nexans|nkt|southwire|encore wire|sumitomo electric|ls cable",
+    "segment_exclude": "television|\\btv\\b|broadband|communications|network|media|wireless|entertainment|cable one|video",
+    "gics_core": [],
+    "include_names": "prysmian|nexans|\\bnkt\\b|ls cable|sumitomo electric|fujikura|furukawa electric|southwire|encore wire|taihan|ls corp"
+  },
+  "water": {
+    "sub_theme": "Critical Infrastructure",
+    "segment_regex": "\\bwater\\b|wastewater|filtration|flow (control|technolog)|fluid (handling|management)|\\bpumps?\\b|membrane|irrigation|metering",
+    "segment_naics": [
+      "22131",
+      "22132",
+      "333911"
+    ],
+    "busdesc_regex": "water treatment|wastewater|water infrastructure|water technolog|desalination|water meter|pumps? and valves?|filtration|water utilit",
+    "anchor_customers": "american water|veolia|xylem|suez|essential utilities|california water",
+    "segment_exclude": "beverage|bottled|boat|marine|heater|sports|oil|gas|insulin|compressor|vacuum|pool|waste",
+    "gics_core": [
+      "55104010"
+    ],
+    "include_names": "kurita|organo|veolia|xylem|pentair|kemira|alfa laval|georg fischer|badger meter|ecolab|mueller water|watts water|advanced drainage|a\\. ?o\\. smith"
+  },
+  "semi_materials_packaging": {
+    "sub_theme": "Supply Chain Security",
+    "segment_regex": "semiconductor|wafer|advanced packaging|ic packaging|assembly (and|&) test|test (and|&) (assembly|measurement)|photomask|electronic (material|chemical)|specialty (chemical|gas|material)|advanced material|probe card|substrate|silicon",
+    "segment_naics": [
+      "33441",
+      "33324"
+    ],
+    "busdesc_regex": "semiconductor (material|packaging|test|equipment)|silicon wafer|photoresist|photomask|specialty gas|cmp slurr|probe card|ic substrate|wafer|advanced packaging|outsourced semiconductor assembly",
+    "anchor_customers": "taiwan semiconductor|tsmc|samsung|intel|micron|sk hynix|globalfoundries|asml|applied materials|lam research|tokyo electron|kla",
+    "segment_exclude": "silicone",
+    "gics_core": [
+      "45301010"
+    ],
+    "include_names": "shin.?etsu|tokyo electron|advantest|disco corp|lasertec|hoya|resonac|sumco|entegris|amkor|ibiden|jsr corp|tokyo ohka|fujifilm|ase technology|air liquide|linde|merck kgaa|soitec|siltronic"
+  },
+  "nuclear_fuel_cycle": {
+    "sub_theme": "Energy Supply",
+    "segment_regex": "nuclear|uranium|enrichment|fuel (services|cycle)",
+    "segment_naics": [],
+    "busdesc_regex": "uranium|nuclear fuel|enrichment|nuclear (service|power|reactor|component)|small modular reactor",
+    "anchor_customers": "cameco|constellation|westinghouse|electricite de france|edf|centrus|urenco|tennessee valley|department of energy",
+    "gics_core": [
+      "10102050"
+    ],
+    "include_names": "cameco|centrus|bwx|kazatomprom|orano|urenco"
+  },
+  "critical_minerals_processing": {
+    "sub_theme": "Supply Chain Security",
+    "segment_regex": "rare earth|lithium|magnet|metals? refin|smelt|battery material|cathode|nickel|cobalt|graphite|tungsten|specialty (metal|alloy)|titanium|copper",
+    "segment_naics": [
+      "33141"
+    ],
+    "busdesc_regex": "rare earth|lithium|permanent magnet|battery material|cathode|graphite|tungsten|critical mineral|(copper|nickel|zinc|aluminum|metal) (refin|smelt)",
+    "anchor_customers": "general motors|tesla|panasonic|lg energy|department of defense|toyota|umicore|basf",
+    "segment_exclude": "petroleum|oil|sugar|magnetic resonance",
+    "gics_core": [],
+    "include_names": "korea zinc|mitsui kinzoku|mitsui mining|umicore|dowa|sumitomo metal mining|nexa|boliden|aurubis|lynas|mp materials|iluka|jx advanced|nyrstar|teck|glencore"
+  },
+  "digital_security": {
+    "sub_theme": "Digital Security",
+    "segment_regex": "\\bsecurity\\b|cyber|identity|threat|defen[cs]e electronic",
+    "segment_naics": [],
+    "busdesc_regex": "cybersecurity|cyber security|information security|network security|identity (and access|management)|endpoint|operational technology|industrial control system|zero trust|threat (detection|intelligence)|firewall|encrypt|authentication|anti.?virus|security (software|solution)",
+    "anchor_customers": "department of defense|u\\.s\\. government|federal government|homeland security|ministry of defen",
+    "segment_exclude": "securities|social security|food|alarm|guard|brokers|telecom|defen[cs]e & national",
+    "gics_core": [],
+    "include_names": "trend micro|nec corp|fujitsu|secunet|f-secure|withsecure|cyberark|radware|ahnlab|yokogawa|thales|check point|palo alto|fortinet|crowdstrike|zscaler|okta|sentinelone|gen digital|darktrace|sangfor"
+  }
+}

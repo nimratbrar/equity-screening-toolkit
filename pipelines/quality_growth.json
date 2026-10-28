@@ -1,0 +1,92 @@
+{
+  "name": "quality_growth",
+  "universe": {
+    "exclude_gsectors": [
+      "40",
+      "60"
+    ],
+    "min_market_cap": 1000
+  },
+  "filters": [
+    {
+      "metric": "rev_cagr_3y",
+      "min": 0.08
+    },
+    {
+      "metric": "rev_growth_1y",
+      "max": 1.0
+    },
+    {
+      "metric": "gross_margin",
+      "min": 0.35
+    },
+    {
+      "metric": "fcf_margin",
+      "min": 0.0
+    },
+    {
+      "metric": "net_debt_to_ebitda",
+      "max": 3,
+      "allow_missing": true
+    }
+  ],
+  "extra_ratios": [
+    "accrual"
+  ],
+  "scoring": {
+    "metrics": [
+      {
+        "metric": "rev_cagr_3y",
+        "weight": 2,
+        "direction": "high",
+        "winsorize": 0.02
+      },
+      {
+        "metric": "roic",
+        "weight": 2,
+        "direction": "high",
+        "winsorize": 0.02
+      },
+      {
+        "metric": "fcf_margin",
+        "weight": 1,
+        "direction": "high"
+      },
+      {
+        "metric": "ebitda_margin_chg_3y",
+        "weight": 1,
+        "direction": "high"
+      },
+      {
+        "metric": "ev_to_ebitda",
+        "weight": 1.5,
+        "direction": "low",
+        "winsorize": 0.02
+      },
+      {
+        "metric": "fr_accrual",
+        "weight": 0.5,
+        "direction": "low"
+      }
+    ],
+    "rank_within": "sector",
+    "min_coverage": 0.6
+  },
+  "output": {
+    "top_n": 50,
+    "columns": [
+      "loc",
+      "gross_margin",
+      "fcf_yield",
+      "rev_growth_1y",
+      "share_change_1y"
+    ]
+  },
+  "region": "global",
+  "analysis": {
+    "top_n": 15,
+    "history_years": 10,
+    "peer_level": "gsubind",
+    "min_peers": 5
+  }
+}

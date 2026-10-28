@@ -1,0 +1,24 @@
+{
+  "name": "hdhyundai_grid_peers",
+  "region": "global",
+  "universe": {
+    "min_market_cap": 1000
+  },
+  "custom_metrics": {
+    "capex_to_da": "capx / dp"
+  },
+  "analysis": {
+    "history_years": 12,
+    "peer_level": "gsubind",
+    "min_peers": 5,
+    "names": [
+      "KR7267260008",
+      "KR7298040007",
+      "KR7010120004",
+      "KR7006260004",
+      "KR7034020008",
+      "JP3788600009"
+    ],
+    "_note": "Example watchlist: up to six public identifiers (ISIN for non-US, ticker for US). Replace with your own case and peers."
+  }
+}

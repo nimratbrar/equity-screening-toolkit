@@ -1,0 +1,36 @@
+# Environments and caches
+.venv/
+__pycache__/
+*.pyc
+*.pkl
+.cache/
+.DS_Store
+.ipynb_checkpoints/
+
+# Credentials: never commit
+.env
+.pgpass
+
+# Licensed data and generated outputs: keep local, never commit
+data/
+output/
+inputs/*
+!inputs/README.md
+*.csv
+!connectors/templates/*.csv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+methodology/**/tables/
+methodology/**/*.html
+
+# Research workspace: notes, reports and boards can hold licensed figures
+research/*
+!research/TEAM.md
+!research/board.py
+methodology/**/board.md
+methodology/**/hde_points.csv
+
+# Claude Code local state
+.claude/settings.local.json

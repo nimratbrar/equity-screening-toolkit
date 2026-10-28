@@ -1,0 +1,89 @@
+{
+  "name": "fab_facility_suppliers",
+  "region": "global",
+  "universe": {
+    "countries": [
+      "JPN",
+      "KOR",
+      "TWN"
+    ],
+    "min_market_cap": 1000,
+    "exclude_gsectors": [
+      "40",
+      "60"
+    ],
+    "keywords_any": [
+      "ultrapure",
+      "ultra-pure",
+      "pure water",
+      "cleanroom",
+      "clean room",
+      "specialty gas",
+      "specialty gases",
+      "high-purity",
+      "high purity",
+      "gas supply",
+      "chemical supply system",
+      "water treatment",
+      "semiconductor plant",
+      "semiconductor factories",
+      "exhaust gas treatment",
+      "vacuum pump"
+    ]
+  },
+  "custom_metrics": {
+    "capex_to_da": "capx / dp"
+  },
+  "filters": [
+    {
+      "metric": "revenue",
+      "min": 200
+    }
+  ],
+  "scoring": {
+    "metrics": [
+      {
+        "metric": "roic",
+        "weight": 2,
+        "direction": "high",
+        "winsorize": 0.02
+      },
+      {
+        "metric": "rev_cagr_3y",
+        "weight": 1.5,
+        "direction": "high",
+        "winsorize": 0.02
+      },
+      {
+        "metric": "ebitda_margin",
+        "weight": 1,
+        "direction": "high"
+      },
+      {
+        "metric": "ev_to_ebitda",
+        "weight": 1.5,
+        "direction": "low",
+        "winsorize": 0.02
+      },
+      {
+        "metric": "net_debt_to_ebitda",
+        "weight": 0.5,
+        "direction": "low"
+      }
+    ],
+    "min_coverage": 0.6
+  },
+  "output": {
+    "top_n": 40,
+    "columns": [
+      "loc",
+      "gross_margin",
+      "fcf_margin",
+      "capex_to_da"
+    ]
+  },
+  "analysis": {
+    "top_n": 15,
+    "history_years": 10
+  }
+}

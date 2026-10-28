@@ -1,0 +1,24 @@
+{
+  "name": "amkor_osat_peers",
+  "region": "global",
+  "universe": {
+    "min_market_cap": 1000
+  },
+  "custom_metrics": {
+    "capex_to_da": "capx / dp"
+  },
+  "analysis": {
+    "history_years": 12,
+    "peer_level": "gsubind",
+    "min_peers": 5,
+    "names": [
+      "AMKR",
+      "TW0003711008",
+      "TW0006239007",
+      "TW0002449006",
+      "TW0006147002",
+      "TW0008150004"
+    ],
+    "_note": "Example watchlist: up to six public identifiers (ISIN for non-US, ticker for US). Replace with your own case and peers."
+  }
+}

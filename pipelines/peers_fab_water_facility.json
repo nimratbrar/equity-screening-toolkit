@@ -1,0 +1,24 @@
+{
+  "name": "peers_fab_water_facility",
+  "region": "global",
+  "universe": {
+    "min_market_cap": 1000
+  },
+  "custom_metrics": {
+    "capex_to_da": "capx / dp"
+  },
+  "analysis": {
+    "history_years": 10,
+    "peer_level": "gsubind",
+    "min_peers": 5,
+    "names": [
+      "JP3201600008",
+      "JP3270000007",
+      "JP3389680004",
+      "TW0006944002",
+      "TW0002404001",
+      "JP3166000004"
+    ],
+    "_note": "Example watchlist: up to six public identifiers (ISIN for non-US, ticker for US). Replace with your own case and peers."
+  }
+}

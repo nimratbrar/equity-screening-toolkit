@@ -1,0 +1,41 @@
+{
+  "name": "watchlist_deepdive",
+  "region": "global",
+  "universe": {
+    "min_market_cap": 1000
+  },
+  "custom_metrics": {
+    "capex_to_da": "capx / dp"
+  },
+  "analysis": {
+    "history_years": 10,
+    "peer_level": "gsubind",
+    "min_peers": 5,
+    "names": [
+      "JP3270000007",
+      "JP3201600008",
+      "FI0009004824",
+      "XYL",
+      "VLTO",
+      "JP3371200001"
+    ],
+    "_note": "Example watchlist: up to six public identifiers (ISIN for non-US, ticker for US). Replace with your own case and peers."
+  },
+  "connectors": {
+    "_comment": "Optional and off by default. Turn on only with files you exported or typed yourself (see connectors/templates/README.md).",
+    "capiq": {
+      "enabled": false,
+      "file": "inputs/capiq_export.xlsx",
+      "sheet": 0,
+      "header_row": 0,
+      "column_map": {
+        "ISIN": "isin",
+        "Ticker": "ticker"
+      }
+    },
+    "industry": {
+      "enabled": false,
+      "file": "inputs/industry_figures.csv"
+    }
+  }
+}

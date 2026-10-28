@@ -1,0 +1,24 @@
+{
+  "name": "alternatives_deepdive",
+  "region": "global",
+  "universe": {
+    "min_market_cap": 1000
+  },
+  "custom_metrics": {
+    "capex_to_da": "capx / dp"
+  },
+  "analysis": {
+    "history_years": 10,
+    "peer_level": "gsubind",
+    "min_peers": 5,
+    "names": [
+      "DE000PFSE253",
+      "JP3545320008",
+      "KR7267260008",
+      "DK0010287663",
+      "JP3955000009",
+      "JP3486000007"
+    ],
+    "_note": "Example watchlist: up to six public identifiers (ISIN for non-US, ticker for US). Replace with your own case and peers."
+  }
+}

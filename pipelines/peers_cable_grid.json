@@ -1,0 +1,24 @@
+{
+  "name": "peers_cable_grid",
+  "region": "global",
+  "universe": {
+    "min_market_cap": 1000
+  },
+  "custom_metrics": {
+    "capex_to_da": "capx / dp"
+  },
+  "analysis": {
+    "history_years": 10,
+    "peer_level": "gsubind",
+    "min_peers": 5,
+    "names": [
+      "FR0000044448",
+      "IT0004176001",
+      "DK0010287663",
+      "KR7006260004",
+      "JP3407400005",
+      "JP3827200001"
+    ],
+    "_note": "Example watchlist: up to six public identifiers (ISIN for non-US, ticker for US). Replace with your own case and peers."
+  }
+}

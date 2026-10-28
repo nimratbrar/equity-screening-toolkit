@@ -1,0 +1,18 @@
+[project]
+name = "equity-screening-toolkit"
+version = "0.1.0"
+description = "Equity Screening Toolkit: thematic global equity screening, scenario and Monte Carlo methodology on WRDS"
+requires-python = ">=3.12"
+dependencies = [
+    "psycopg2-binary",
+    "wrds>=3.5",
+    "pandas>=2.2,<3",
+    "openpyxl",
+    "xlrd>=2.0.2",
+    "requests>=2.34.2",
+    "statsmodels>=0.15.0",
+    "scipy>=1.18.1",
+]
+
+[tool.uv]
+package = false

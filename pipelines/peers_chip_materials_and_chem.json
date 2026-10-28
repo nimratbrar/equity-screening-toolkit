@@ -1,0 +1,24 @@
+{
+  "name": "peers_chip_materials_and_chem",
+  "region": "global",
+  "universe": {
+    "min_market_cap": 1000
+  },
+  "custom_metrics": {
+    "capex_to_da": "capx / dp"
+  },
+  "analysis": {
+    "history_years": 10,
+    "peer_level": "gsubind",
+    "min_peers": 5,
+    "names": [
+      "JP3371200001",
+      "JP3571800006",
+      "JP3409400003",
+      "JP3322930003",
+      "TW0006488000",
+      "DE000WAF3001"
+    ],
+    "_note": "Example watchlist: up to six public identifiers (ISIN for non-US, ticker for US). Replace with your own case and peers."
+  }
+}
